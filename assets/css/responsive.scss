@@ -1,0 +1,18 @@
+@media (max-width: 800px) {
+    .container {
+        padding: 2rem;
+        width: 80%;
+
+        h1 {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        h1{
+            font-size: 2rem;
+        }
+    }
+}

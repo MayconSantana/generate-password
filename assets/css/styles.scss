@@ -1,0 +1,119 @@
+@mixin reset() {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+$main-color: #55b7f0;
+$secondary-color: #111b1a;
+
+.none {
+    display: none !important;
+}
+
+* {
+    @include reset();
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #080808;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: $main-color;
+    padding: 13rem 5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px $main-color;
+    width: 50%;
+    height: 50%;
+
+    h1 {
+        margin-bottom: 3rem !important;
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 80%;
+
+        input {
+            -webkit-appearance: none;
+            appearance: none;
+
+            display: inline-block;
+            align-self: center;
+            width: 100%;
+            height: 0.5em;
+            border-radius: 5px;
+            background-color: #000000;
+            outline: none;
+            cursor: e-resize;
+
+            &::-webkit-slider-thumb {
+                border-radius: 50%;
+            }
+        }
+
+        #range::-webkit-slider-thumb{
+            -webkit-appearance: none; /* remove a aparencia padão */
+            border: none;
+            
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: $secondary-color;
+          }
+
+        button {
+            width: 50%;
+            align-self: center;
+            border: none;
+            text-transform: uppercase;
+            padding: 10px;
+            font-weight: bold;
+            background: #080808;
+            color: #ccc;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                background: #ccc;
+                color: #080808;
+            }
+        }
+    }
+
+    .result {
+        margin-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        #password {
+            width: 100%;
+            padding: 5px 20px;
+            height: 3rem;
+            align-self: center;
+            background: #080808;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }   
+}
